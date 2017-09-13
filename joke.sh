@@ -4,7 +4,7 @@ timestamp1=$(date +%S_%N)
 timestamp2=$(date +%S_%N_%S)
 filename1=/tmp/${timestamp1}.mp3
 filename2=/tmp/${timestamp2}.mp3
-
+ttsendpoint=http://127.0.0.1:8080/speech
 
 # get a joke
 line="$(curl \
@@ -22,7 +22,7 @@ curl \
     -o $filename2 \
     -G \
     --data-urlencode "text=$(cat $filename1)" \
-    http://127.0.0.1:8080/speech
+    $ttsendpoint
 
 
 printf $filename2
