@@ -4,7 +4,7 @@ timestamp1=$(date +%S_%N)
 timestamp2=$(date +%S_%N_%S)
 filename1=/tmp/${timestamp1}.mp3
 filename2=/tmp/${timestamp2}.mp3
-ttsendpoint=http://127.0.0.1:8080/speech
+ttsendpoint=http://tts:8080/speech
 
 # get a joke
 line="$(curl \

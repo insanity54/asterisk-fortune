@@ -3,7 +3,7 @@
 timestamp=$(date +%S_%N)
 filename=/tmp/${timestamp}.mp3
 line="$(/usr/games/fortune -s /usr/share/games/fortunes)"
-ttsendpoint=http://127.0.0.1:8080/speech
+ttsendpoint=http://tts:8080/speech
 
 
 curl \
